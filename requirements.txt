@@ -1,0 +1,44 @@
+# ════════════════════════════════════════════════════════
+# HSAE v6.0.0 — Complete Requirements
+# HydroSovereign AI Engine
+# Author: Seifeldin M.G. Alkedir — University of Khartoum
+# ════════════════════════════════════════════════════════
+
+# ── Core UI ──────────────────────────────────────────────
+streamlit>=1.35.0
+
+# ── Data Science ─────────────────────────────────────────
+pandas>=2.0.0
+numpy>=1.26.0
+scipy>=1.12.0
+
+# ── Visualization ────────────────────────────────────────
+plotly>=5.18.0
+folium>=0.16.0
+streamlit-folium>=0.20.0
+
+# ── Machine Learning ─────────────────────────────────────
+scikit-learn>=1.4.0
+
+# ── HTTP / APIs (Open-Meteo, GloFAS, USGS, GRACE-FO) ────
+requests>=2.31.0
+
+# ── Export (Excel reports) ───────────────────────────────
+openpyxl>=3.1.0
+
+# ── Alerts / Scheduler ───────────────────────────────────
+schedule>=1.2.0
+python-telegram-bot>=20.0
+
+# ── Database ─────────────────────────────────────────────
+# SQLite is built into Python — no extra package needed
+
+# ── Optional: Production Scheduler ───────────────────────
+# APScheduler>=3.10.0   # alternative to schedule for Streamlit Cloud
+
+# ── Optional: GEE Python API (advanced users) ─────────────
+# earthengine-api>=0.1.390   # pip install earthengine-api && earthengine authenticate
+
+# ── Install command ───────────────────────────────────────
+# pip install streamlit pandas numpy scipy plotly folium streamlit-folium \
+#             scikit-learn requests openpyxl schedule python-telegram-bot
