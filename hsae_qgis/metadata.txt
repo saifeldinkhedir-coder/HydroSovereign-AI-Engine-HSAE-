@@ -1,0 +1,17 @@
+[general]
+name=HydroSovereign AI Engine
+qgisMinimumVersion=3.16
+qgisMaximumVersion=3.99
+description=Transboundary river basin monitoring — 26 basins · TDI · UN 1997 · GEE · AI
+version=6.0.0
+author=Seifeldin M.G. Alkedir
+email=saifeldinkhedir@gmail.com
+about=HSAE integrates satellite remote sensing (GEE), AI forecasting, and UN Watercourses Convention automation for 26 transboundary river basins across 7 geographic regions.
+tracker=https://github.com/saifeldinkhedir-coder/HydroSovereign-AI-Engine-HSAE-/issues
+repository=https://github.com/saifeldinkhedir-coder/HydroSovereign-AI-Engine-HSAE-
+homepage=https://hsae-v600.streamlit.app
+tags=hydrology,water,transboundary,remote sensing,GEE,AI,UN,rivers,basins,TDI
+category=Plugins
+icon=icon.png
+experimental=False
+deprecated=False
