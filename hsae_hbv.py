@@ -2,21 +2,21 @@
 HydroSovereign AI Engine (HSAE) v5.0.0 — Module: hsae_hbv
 HBV Rainfall-Runoff Model · AHIFD · ALTM · LHS Calibration
 
-Original Scientific Contributions (Alkedir, 2026):
-  - Alkedir Human-Induced Flow Deficit (AHIFD):
+Original Scientific Contributions (Alkhedir, 2026):
+  - Alkhedir Human-Induced Flow Deficit (AHIFD):
       HIFD_pct = (Q_nat - Q_obs) / Q_nat × 100  [Line ~365]
-  - Alkedir Legal Threshold Mapping (ALTM):
+  - Alkhedir Legal Threshold Mapping (ALTM):
       Art5_flag: AHIFD > 25%  [Line ~366]
       Art7_flag: AHIFD > 40%  [Line ~367]
-  - Alkedir HBV-Legal Bridge (AHLB):
+  - Alkhedir HBV-Legal Bridge (AHLB):
       Automated pipeline: HBV physics → AHIFD → ALTM → UN 1997 Article flags
 
 Standard method used (not invented here):
   - HBV rainfall-runoff model (Bergström, 1992)
 
-Author : Seifeldin M.G. Alkedir — Independent Researcher
+Author : Seifeldin M.G. Alkhedir — Independent Researcher
 ORCID  : 0000-0003-0821-2991
-Ref    : Alkedir, S.M.G. (2026b). Journal of Hydrology (planned).
+Ref    : Alkhedir, S.M.G. (2026b). Journal of Hydrology (planned).
 """
 # hsae_hbv.py  –  HSAE Phase III · HBV Catchment Hydrology Model
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -347,15 +347,15 @@ def compute_natural_flow_baseline(
     """
     Run HBV with NATURAL (pre-dam) conditions to estimate Q_natural.
     Then compare with declared Q_observed (or simulated outflow).
-    The difference = Alkedir Human-Induced Flow Deficit (AHIFD) — core legal metric.
+    The difference = Alkhedir Human-Induced Flow Deficit (AHIFD) — core legal metric.
 
     AHIFD (%) = max(0, Q_natural_HBV - Q_declared) / Q_natural_HBV × 100
-    ALTM thresholds (Alkedir Legal Threshold Mapping Framework):
+    ALTM thresholds (Alkhedir Legal Threshold Mapping Framework):
         AHIFD > 25%  →  Art. 5 flag  (equitable utilization concern)
         AHIFD > 40%  →  Art. 7 flag  (significant harm)
         AHIFD > 60%  →  Art. 12 grounds (protest notification)
 
-    Ref: Alkedir, S.M.G. (2026b). Journal of Hydrology (planned).
+    Ref: Alkhedir, S.M.G. (2026b). Journal of Hydrology (planned).
     ORCID: 0000-0003-0821-2991
     """
     area_km2 = basin.get("eff_cat_km2", 100_000)
@@ -396,12 +396,12 @@ def compute_natural_flow_baseline(
         else:
             df_hbv["Q_obs_BCM"] = df_hbv["Q_nat_BCM"] * 0.78  # fallback estimate
 
-    # ── Alkedir Human-Induced Flow Deficit (AHIFD) ──────────────────────
+    # ── Alkhedir Human-Induced Flow Deficit (AHIFD) ──────────────────────
     # AHIFD = max(0, Q_nat - Q_obs) / Q_nat × 100
-    # Alkedir Legal Threshold Mapping (ALTM):
+    # Alkhedir Legal Threshold Mapping (ALTM):
     #   AHIFD > 25% → Art5_flag (Art. 5 equitable utilization concern)
     #   AHIFD > 40% → Art7_flag (Art. 7 significant harm)
-    # Ref: Alkedir (2026a,b) — ORCID: 0000-0003-0821-2991
+    # Ref: Alkhedir (2026a,b) — ORCID: 0000-0003-0821-2991
     df_hbv["HIFD_BCM"]  = (df_hbv["Q_nat_BCM"] - df_hbv["Q_obs_BCM"]).clip(lower=0)
     df_hbv["HIFD_pct"]  = df_hbv["HIFD_BCM"] / (df_hbv["Q_nat_BCM"] + 1e-9) * 100
     df_hbv["Art5_flag"] = df_hbv["HIFD_pct"] > 25  # ALTM threshold → Art. 5 concern
