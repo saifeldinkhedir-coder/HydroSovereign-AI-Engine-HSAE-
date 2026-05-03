@@ -2,15 +2,15 @@
 HydroSovereign AI Engine (HSAE) v5.0.0 — Module: hsae_alerts
 4-Level Alert System · Telegram Dispatcher · Auto-Protest Art.12
 
-Uses Alkedir contributions:
-  - ATDI (Alkedir Transparency Deficit Index) → transparency alert level
-  - AFSF (Alkedir Forensic Scoring Function) → forensic alert level
-  - ALTM (Alkedir Legal Threshold Mapping) → Art.12 auto-protest trigger
-  - AHLB (Alkedir HBV-Legal Bridge) → legal flag propagation
+Uses Alkhedir contributions:
+  - ATDI (Alkhedir Transparency Deficit Index) → transparency alert level
+  - AFSF (Alkhedir Forensic Scoring Function) → forensic alert level
+  - ALTM (Alkhedir Legal Threshold Mapping) → Art.12 auto-protest trigger
+  - AHLB (Alkhedir HBV-Legal Bridge) → legal flag propagation
 
-Author : Seifeldin M.G. Alkedir — Independent Researcher
+Author : Seifeldin M.G. Alkhedir — Independent Researcher
 ORCID  : 0000-0003-0821-2991
-Ref    : Alkedir, S.M.G. (2026a). Remote Sensing of Environment (under review).
+Ref    : Alkhedir, S.M.G. (2026a). Remote Sensing of Environment (under review).
 """
 # hsae_alerts.py  –  HSAE Early Warning & Legal Automation Module
 # ═══════════════════════════════════════════════════════════════════════════════
