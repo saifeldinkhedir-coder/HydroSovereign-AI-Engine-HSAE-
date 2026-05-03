@@ -2,17 +2,17 @@
 HydroSovereign AI Engine (HSAE) v5.0.0 — Module: hsae_v990
 Legal Nexus · MODIS ET Enrichment · ATDI · Global Dam Nexus
 
-Original Scientific Contributions (Alkedir, 2026):
-  - Alkedir Transparency Deficit Index (ATDI):
+Original Scientific Contributions (Alkhedir, 2026):
+  - Alkhedir Transparency Deficit Index (ATDI):
       tdi = clip((I_adj - Q_out) / (I_adj + 0.1), 0, 1)  [Line ~146]
-  - Alkedir MODIS ET Correction Coefficient (α = 0.3):
+  - Alkhedir MODIS ET Correction Coefficient (α = 0.3):
       I_adj = max(0, I_in - 0.3 × natural_loss)  [Line ~145]
-  - Alkedir Digital Transparency Score (ADTS):
+  - Alkhedir Digital Transparency Score (ADTS):
       ADTS = 100 - ATDI  [derived from ATDI]
 
-Author : Seifeldin M.G. Alkedir — Independent Researcher
+Author : Seifeldin M.G. Alkhedir — Independent Researcher
 ORCID  : 0000-0003-0821-2991
-Ref    : Alkedir, S.M.G. (2026a). Remote Sensing of Environment (under review).
+Ref    : Alkhedir, S.M.G. (2026a). Remote Sensing of Environment (under review).
 """
 # hsae_v990.py
 # HSAE v990.0 – International Law & Nexus
@@ -155,12 +155,12 @@ body {background: #020617;}
         # ET (BCM/day) = ET0 (mm/day) × area (km²) × 1e-3
         modis_et = ET0_mm * area * 1e-3
 
-        # ── Alkedir Transparency Deficit Index (ATDI) ────────────────────
+        # ── Alkhedir Transparency Deficit Index (ATDI) ────────────────────
         # ATDI — uses hsae_tdi.compute_tdi() canonical formula (ε=0.001)
         # where I_adj = max(0, I_in - α × natural_loss),  α = 0.3
-        # α = 0.3 is the Alkedir MODIS ET Correction Coefficient — empirically
+        # α = 0.3 is the Alkhedir MODIS ET Correction Coefficient — empirically
         # calibrated to minimise false-positive legal flags during dry seasons.
-        # Ref: Alkedir, S.M.G. (2026a). Remote Sensing of Environment (under review).
+        # Ref: Alkhedir, S.M.G. (2026a). Remote Sensing of Environment (under review).
         # ORCID: 0000-0003-0821-2991
         natural_loss = evap + modis_et
         adjusted_inflow = np.maximum(inflow - natural_loss * 0.3, 0)  # α = 0.3
