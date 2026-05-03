@@ -73,7 +73,7 @@ def intro_page():
     into a single sovereign intelligence platform.
   </p>
   <p style='color:#94a3b8;font-size:0.85rem;margin:0.8rem 0 0;font-style:italic;'>
-    Seifeldin M. G. Alkedir · M.Sc. Environmental Sciences · Institute of Environmental Studies · University of Khartoum
+    Seifeldin M. G. Alkhedir · M.Sc. Environmental Sciences · Institute of Environmental Studies · University of Khartoum
   </p>
   <p style='margin:0.6rem 0 0;font-size:0.78rem;'>
     <span style='color:#64748b;font-style:italic;'>Independent Researcher · </span>
@@ -323,7 +323,7 @@ docker compose up -d
     # ── CITATION ─────────────────────────────────────────────────────────────
     st.markdown("## 📄 Citation")
     st.code("""@software{alkedir_hsae_2026,
-  author    = {Alkedir, Seifeldin M. G.},
+  author    = {Alkhedir, Seifeldin M. G.},
   title     = {HydroSovereign AI Engine (HSAE): An Open-Source Platform for
                Transboundary Water Sovereignty Analysis},
   year      = {2026},
