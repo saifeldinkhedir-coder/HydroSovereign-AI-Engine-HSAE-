@@ -2,20 +2,20 @@
 HydroSovereign AI Engine (HSAE) v5.0.0 — Module: hsae_v430
 Hybrid Decision Support System · SAR+NDWI+GPM+AI
 
-Original Scientific Contributions (Alkedir, 2026):
-  - Alkedir SAR-NDWI Cloud-Adaptive Fusion (ASCAF):
+Original Scientific Contributions (Alkhedir, 2026):
+  - Alkhedir SAR-NDWI Cloud-Adaptive Fusion (ASCAF):
       Fused_Area = S1·w + S2·(1-w); optical_ok = NDWI ≥ threshold  [Lines ~99-100]
-  - Alkedir Forensic Scoring Function (AFSF):
+  - Alkhedir Forensic Scoring Function (AFSF):
       AFSF = TD_Deficit.rolling(4).mean().max() × 100  [Line ~153]
-  - Alkedir Transparency Deficit Index (ATDI):
+  - Alkhedir Transparency Deficit Index (ATDI):
       Computed as TD_Deficit time-series; ATDI summary = mean × 100  [Lines ~150-155]
 
 Standard methods used (not invented here):
   - Random Forest (Breiman, 2001) for 90-day storage forecast
 
-Author : Seifeldin M.G. Alkedir — Independent Researcher
+Author : Seifeldin M.G. Alkhedir — Independent Researcher
 ORCID  : 0000-0003-0821-2991
-Ref    : Alkedir, S.M.G. (2026a). Remote Sensing of Environment (under review).
+Ref    : Alkhedir, S.M.G. (2026a). Remote Sensing of Environment (under review).
 """
 # hsae_v430.py  ─  HSAE v500  Hybrid DSS
 # =============================================================================
@@ -116,9 +116,9 @@ def _run_engine(basin: dict, s1_weight: float, evaporation: float,
     df["S2_NDWI"] = np.clip(ndwi_base + rng.normal(0, 0.12, n_days), 0.05, 0.92)
     df["S2_Area"] = df["S1_Area"] * (1 + df["S2_NDWI"] * 0.12)
 
-    # ── Alkedir SAR-NDWI Cloud-Adaptive Fusion (ASCAF) ──────────────────
+    # ── Alkhedir SAR-NDWI Cloud-Adaptive Fusion (ASCAF) ──────────────────
     # A_fused = S1·w + S2·(1−w);  optical_ok: NDWI ≥ cloud_threshold
-    # Ref: Alkedir, S.M.G. (2026a). Remote Sensing of Environment (under review).
+    # Ref: Alkhedir, S.M.G. (2026a). Remote Sensing of Environment (under review).
     df["Fused_Area"] = df["S1_Area"] * s1_weight + df["S2_Area"] * (1 - s1_weight)
     optical_ok = df["S2_NDWI"] >= cloud_threshold  # ASCAF quality gate
     df["Effective_Area"] = np.where(optical_ok, df["Fused_Area"], df["S1_Area"])
@@ -168,7 +168,7 @@ def _run_engine(basin: dict, s1_weight: float, evaporation: float,
     residual   = total_in - total_out - total_dv - total_loss
     closure    = abs(residual) / max(abs(total_in), 1e-9) * 100
 
-    # ── Alkedir Transparency Deficit Index (ATDI) ────────────────────────
+    # ── Alkhedir Transparency Deficit Index (ATDI) ────────────────────────
     # ATDI time-series: normalised rain-outflow gap per time step
     rain_norm       = df["GPM_Rain_mm"] / (df["GPM_Rain_mm"].max() + 1e-9)
     out_norm        = df["Outflow_BCM"] / (df["Outflow_BCM"].max() + 1e-9)
@@ -176,9 +176,9 @@ def _run_engine(basin: dict, s1_weight: float, evaporation: float,
     df = add_tdi_to_df(df, inflow_col="Inflow_BCM", outflow_col="Outflow_BCM")
     df["TD_Deficit"] = df["TDI_adj"]              # backward compat alias
     td_index         = float(df["TDI_adj"].mean() * 100)
-    # ── Alkedir Forensic Scoring Function (AFSF) ──────────────────────────
+    # ── Alkhedir Forensic Scoring Function (AFSF) ──────────────────────────
     # AFSF = rolling_4_mean(ATDI).max() × 100 — trend-amplified legal signal
-    # Ref: Alkedir, S.M.G. (2026a). Remote Sensing of Environment (under review).
+    # Ref: Alkhedir, S.M.G. (2026a). Remote Sensing of Environment (under review).
     forensic_score  = float(df["TD_Deficit"].rolling(4).mean().max() * 100)
 
     # Store scalars
