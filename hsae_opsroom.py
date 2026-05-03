@@ -2,17 +2,17 @@
 HydroSovereign AI Engine (HSAE) v5.0.0 — Module: hsae_opsroom
 Live Operations Room · Global Map · War Room · SITREP
 
-Original Scientific Contributions (Alkedir, 2026):
-  - Alkedir Sovereignty Index (ASI):
+Original Scientific Contributions (Alkhedir, 2026):
+  - Alkhedir Sovereignty Index (ASI):
       ASI = 0.35·E + 0.25·ADTS + 0.25·F + 0.15·(1-D/5)  [Lines ~109-112]
-  - Alkedir Digital Transparency Score (ADTS):
+  - Alkhedir Digital Transparency Score (ADTS):
       ADTS = max(0, 100 - ATDI)  [Line ~95]
-  - Alkedir Water Sovereignty Risk Matrix (AWSRM):
+  - Alkhedir Water Sovereignty Risk Matrix (AWSRM):
       2-D: ATDI × Dispute Level → 5 risk tiers (War Room tab)
 
-Author : Seifeldin M.G. Alkedir — Independent Researcher
+Author : Seifeldin M.G. Alkhedir — Independent Researcher
 ORCID  : 0000-0003-0821-2991
-Ref    : Alkedir, S.M.G. (2026c). Water Resources Management (planned).
+Ref    : Alkhedir, S.M.G. (2026c). Water Resources Management (planned).
 """
 # hsae_opsroom.py  –  HSAE Phase III · Live Operations Room
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -108,7 +108,7 @@ def _compute_live_basin_metrics() -> pd.DataFrame:
         # Metrics
         equity   = float((outflow / (inflow + 0.001)).mean() * 100)
         tdi      = float(np.clip((inflow - outflow) / (inflow + 0.001), 0, 1).mean() * 100)  # ATDI
-        transp   = max(0, 100 - tdi)  # ADTS — Alkedir Digital Transparency Score
+        transp   = max(0, 100 - tdi)  # ADTS — Alkhedir Digital Transparency Score
         fill_pct = float(volume[-1] / cap * 100)
 
         # GPM last 24h
@@ -120,10 +120,10 @@ def _compute_live_basin_metrics() -> pd.DataFrame:
         # Dispute level
         dlevel   = _DISPUTE_LEVEL.get(bid, (1,"🟢 Stable"))[0]
 
-        # ── Alkedir Sovereignty Index (ASI) ─────────────────────────────
+        # ── Alkhedir Sovereignty Index (ASI) ─────────────────────────────
         # ASI = 0.35·E + 0.25·ADTS + 0.25·F + 0.15·(1-D/5)
         # where E=Equity, ADTS=Digital Transparency Score, F=Fill%, D=Dispute[0-5]
-        # Ref: Alkedir, S.M.G. (2026c). Water Resources Management (planned).
+        # Ref: Alkhedir, S.M.G. (2026c). Water Resources Management (planned).
         # ORCID: 0000-0003-0821-2991
         sov_idx  = round(
             0.35 * equity / 100 +
