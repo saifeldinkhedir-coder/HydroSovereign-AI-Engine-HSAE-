@@ -5,7 +5,7 @@ This module is kept for backward compatibility only.
 All actual logic has been consolidated into hsae_gee_data.py (v6).
 New code should import directly from hsae_gee_data.
 
-Author : Seifeldin M.G. Alkedir
+Author : Seifeldin M.G. Alkhedir
 """
 from __future__ import annotations
 import warnings
