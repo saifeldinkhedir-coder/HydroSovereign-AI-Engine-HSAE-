@@ -2,7 +2,7 @@
 gee_engine.py  ─  HSAE v6.0.0
 ===============================
 Google Earth Engine — Python API Integration
-Author : Seifeldin M.G. Alkedir — University of Khartoum
+Author : Seifeldin M.G. Alkhedir — University of Khartoum
 ORCID  : 0000-0003-0821-2991
 
 Provides LIVE satellite data retrieval via the earthengine-api Python client.
