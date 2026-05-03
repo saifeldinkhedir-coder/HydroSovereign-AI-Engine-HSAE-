@@ -1,15 +1,15 @@
 """
 hsae_tdi.py  ─  HSAE v6.0.0
 ============================
-Single Source of Truth: Alkedir Transparency Deficit Index (ATDI/TDI)
-Author : Seifeldin M.G. Alkedir — University of Khartoum
+Single Source of Truth: Alkhedir Transparency Deficit Index (ATDI/TDI)
+Author : Seifeldin M.G. Alkhedir — University of Khartoum
 ORCID  : 0000-0003-0821-2991
 
 ALL modules must import TDI functions from HERE — never redefine locally.
 This eliminates the 3-formula inconsistency found in v5/v6.0.0.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-CANONICAL FORMULA (Alkedir 2026, accepted for RSE-2):
+CANONICAL FORMULA (Alkhedir 2026, accepted for RSE-2):
 
     I_adj  = max(0, I_in − α·(ET_PM + ET_MODIS))        [BCM/day]
     TDI    = max(0, (I_adj − Q_out) / (I_adj + ε))       [0–1]
@@ -105,7 +105,7 @@ def compute_atdi(
     et_mod:  "pd.Series | np.ndarray | None" = None,
 ) -> float:
     """
-    Alkedir Transparency Deficit Index — scalar summary [%].
+    Alkhedir Transparency Deficit Index — scalar summary [%].
 
         ATDI = mean(TDI) × 100
     """
@@ -121,7 +121,7 @@ def compute_afsf(
     roll:    int = TDI_ROLL_DAYS,
 ) -> float:
     """
-    Alkedir Forensic Signal Factor — peak rolling TDI [%].
+    Alkhedir Forensic Signal Factor — peak rolling TDI [%].
 
         AFSF = max(rolling_k(TDI)) × 100
     """
