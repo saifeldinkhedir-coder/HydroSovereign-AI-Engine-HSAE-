@@ -1,7 +1,7 @@
 """
 app.py  ─  HSAE v6.0.0  Application Router
 ===========================================
-Author : Seifeldin M.G. Alkedir — University of Khartoum
+Author : Seifeldin M.G. Alkhedir — University of Khartoum
 Version: 6.0.0  |  March 2026
 
 New in v6.0.0:
@@ -253,7 +253,7 @@ with st.sidebar:
                     unsafe_allow_html=True)
 
     st.markdown("---")
-    st.caption("HSAE v6.0.0 · Dr. Seifeldin M.G. Alkedir · University of Khartoum")
+    st.caption("HSAE v6.0.0 · Dr. Seifeldin M.G. Alkhedir · University of Khartoum")
 
 # ── Use real data if available and mode selected ──────────────────────────────
 def _get_df(basin_cfg: dict) -> pd.DataFrame | None:
