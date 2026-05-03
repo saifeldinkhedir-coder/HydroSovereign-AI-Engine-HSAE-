@@ -1,7 +1,7 @@
 """
 hsae_db.py  ─  HSAE v6.0.0  Persistent Database (SQLite)
 =========================================================
-Author : Seifeldin M.G. Alkedir
+Author : Seifeldin M.G. Alkhedir
 Version: 1.0.0  |  March 2026
 
 Zero-config SQLite database for:
