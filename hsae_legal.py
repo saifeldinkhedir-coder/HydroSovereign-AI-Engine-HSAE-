@@ -1,5 +1,5 @@
 # hsae_legal.py  –  HSAE Legal Enhancement Module
-# Updated: 2026-02-26  |  Author: Seifeldin M. G. Alkedir
+# Updated: 2026-02-26  |  Author: Seifeldin M. G. Alkhedir
 # Covers:
 #   1. Auto-Protest Report Generator (Equity < 40% → PDF-ready HTML)
 #   2. ICJ Precedents Database (Gabcikovo, Pulp Mills, Kishenganga …)
