@@ -2,7 +2,7 @@
 hsae_gee_data.py  ─  HSAE v6.0.0
 =================================
 Complete Satellite + Ground Data Integration
-Author : Seifeldin M.G. Alkedir — University of Khartoum
+Author : Seifeldin M.G. Alkhedir — University of Khartoum
 ORCID  : 0000-0003-0821-2991
 Version: 3.0.0  |  March 2026
 
@@ -117,7 +117,7 @@ def generate_s1_sar_script(basin: dict) -> str:
     // Basin  : {basin.get('name', 'Basin')}
     // Product: COPERNICUS/S1_GRD (IW, VV, Ascending)
     // Output : date, S1_VV_mean_dB, S1_Water_Area_km2
-    // Author : Seifeldin M.G. Alkedir — ORCID 0000-0003-0821-2991
+    // Author : Seifeldin M.G. Alkhedir — ORCID 0000-0003-0821-2991
     // ═══════════════════════════════════════════════════════════════
 
     var basin = ee.Geometry.Rectangle([{bbox[0]}, {bbox[1]}, {bbox[2]}, {bbox[3]}]);
