@@ -1,5 +1,5 @@
 # hsae_devops.py  –  HSAE DevOps & Advanced Integration Module
-# Updated: 2026-02-26  |  Author: Seifeldin M. G. Alkedir
+# Updated: 2026-02-26  |  Author: Seifeldin M. G. Alkhedir
 # Covers:  PostGIS schema | FastAPI router | Docker compose | CI/CD YAML
 
 """
