@@ -2,13 +2,13 @@
 HydroSovereign AI Engine (HSAE) v5.0.0 — Module: hsae_audit
 SHA-256 Audit Chain · RBAC · ICJ Admissibility Checklist
 
-Legal evidence chain for all Alkedir contributions:
+Legal evidence chain for all Alkhedir contributions:
   SHA-256 hash of every ATDI, AHIFD, AFSF, ASI computation logged here.
   Satisfies ILC 2001 Art.31 evidence admissibility standard.
 
-Author : Seifeldin M.G. Alkedir — Independent Researcher
+Author : Seifeldin M.G. Alkhedir — Independent Researcher
 ORCID  : 0000-0003-0821-2991
-Ref    : Alkedir, S.M.G. (2026a). Remote Sensing of Environment (under review).
+Ref    : Alkhedir, S.M.G. (2026a). Remote Sensing of Environment (under review).
 """
 # hsae_audit.py  –  HSAE Legal Audit Trail & Governance Module
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -665,7 +665,7 @@ class TestAudit:
 
 MKDOCS_YML = """site_name: HydroSovereign AI Engine (HSAE)
 site_description: AI-Powered Transboundary Water Sovereignty Analysis
-site_author: Dr. Seifeldin M.G. Alkedir, University of Khartoum
+site_author: Dr. Seifeldin M.G. Alkhedir, University of Khartoum
 site_url: https://hsae.readthedocs.io
 
 repo_name: hsae/hsae
