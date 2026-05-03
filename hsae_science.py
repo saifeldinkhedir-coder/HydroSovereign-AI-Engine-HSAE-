@@ -1,5 +1,5 @@
 # hsae_science.py  –  HSAE Scientific Enhancement Module
-# Updated: 2026-02-26  |  Author: Seifeldin M. G. Alkedir
+# Updated: 2026-02-26  |  Author: Seifeldin M. G. Alkhedir
 # Covers:
 #   1. Sentinel-2 Water Mask overlay (folium ImageOverlay)
 #   2. Penman-Monteith Evapotranspiration
