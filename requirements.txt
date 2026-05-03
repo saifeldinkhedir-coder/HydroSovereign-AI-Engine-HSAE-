@@ -1,7 +1,7 @@
 # ════════════════════════════════════════════════════════
 # HSAE v6.0.0 — Complete Requirements
 # HydroSovereign AI Engine
-# Author: Seifeldin M.G. Alkedir — University of Khartoum
+# Author: Seifeldin M.G. Alkhedir — University of Khartoum
 # ════════════════════════════════════════════════════════
 
 # ── Core UI ──────────────────────────────────────────────
