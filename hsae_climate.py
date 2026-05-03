@@ -1,7 +1,7 @@
 """
 hsae_climate.py  ─  HSAE v6.0.0  Climate Change Scenarios
 ==========================================================
-Author : Seifeldin M.G. Alkedir
+Author : Seifeldin M.G. Alkhedir
 Version: 1.0.0  |  March 2026
 
 Climate projections based on CMIP6 / IPCC AR6 deltas:
