@@ -1,7 +1,7 @@
 """
 hsae_ai.py  ─  HSAE v6.0.0  Advanced AI/ML Module
 ===================================================
-Author : Seifeldin M.G. Alkedir
+Author : Seifeldin M.G. Alkhedir
 Version: 1.0.0  |  March 2026
 
 1. Ensemble: RF + MLP + GBM (dynamic R²-weighted)
